@@ -1,0 +1,11 @@
+.movie-poster {
+	transition: opacity 125ms linear;
+}
+
+.movie-poster:hover {
+	opacity: .75;
+}
+
+.movie-poster a, .movie-poster a:hover {
+	color: inherit;
+}
