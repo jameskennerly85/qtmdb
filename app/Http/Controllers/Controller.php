@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 // use Illuminate\Foundation\Validation\ValidatesRequests;
 // use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Services\Film;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
@@ -29,5 +30,16 @@ class Controller extends BaseController
 			'film' => $film
 		]);
 	}
+
+    public function search(Request $request, Film $filmService)
+    {
+        $term = $request->get('term');
+
+        $films = $filmService->searchByTerm($term);
+
+        return view( 'search', [
+            'films' => $films
+        ]);
+    }
 
 }

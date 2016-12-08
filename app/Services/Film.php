@@ -23,4 +23,7 @@ class Film
 		return $this->model->with('actors')->where( 'title', $title )->first();
 	}
 
+    public function searchByTerm( $term ) {
+        return $this->model->with('actors')->where( 'title', 'like', "%$term%" )->get();
+    }
 }

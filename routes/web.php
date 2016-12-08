@@ -12,4 +12,5 @@
 */
 
 Route::get( '/', 'Controller@home' );
+Route::get( '/search', 'Controller@search' );
 Route::get( '{film_slug}', 'Controller@film' );
