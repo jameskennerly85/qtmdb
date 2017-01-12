@@ -26,6 +26,10 @@ class Controller extends BaseController
 		$name = str_replace( '-', ' ', strtoupper( $film_slug ) );
 		$film = $filmService->getByTitle( $name );
 
+		if(!count($film)){
+			return redirect('/');
+		}		
+
 		return view( 'single', [
 			'film' => $film
 		]);
