@@ -24,8 +24,10 @@
 							<p class="title">{{$films[0]->title}} ({{$films[0]->release_year}})</p>
 							<p class="subtitle">
 								<span class="icon is-small"><i class="fa fa-star"></i></span>
-								{{$films[0]->actors[0]->fullname}},
-								{{$films[0]->actors[1]->fullname}}
+								@foreach ($films[0]->actors as $key => $actor)
+									{{$actor->fullname}},
+									{{$actor->fullname}}
+								@endforeach
 							</p>
 						</a>
 					</article>
@@ -34,8 +36,10 @@
 							<p class="title">{{$films[1]->title}} ({{$films[1]->release_year}})</p>
 							<p class="subtitle">
 								<span class="icon is-small"><i class="fa fa-star"></i></span>
-								{{$films[1]->actors[0]->fullname}},
-								{{$films[1]->actors[1]->fullname}}
+								@foreach ($films[1]->actors as $key => $actor)
+									{{$actor->fullname}},
+									{{$actor->fullname}}
+								@endforeach
 							</p>
 						</a>
 					</article>
@@ -46,8 +50,10 @@
 							<p class="title">{{$films[2]->title}} ({{$films[2]->release_year}})</p>
 							<p class="subtitle">
 								<span class="icon is-small"><i class="fa fa-star"></i></span>
-								{{$films[2]->actors[0]->fullname}},
-								{{$films[2]->actors[1]->fullname}}
+								@foreach ($films[2]->actors as $key => $actor)
+									{{$actor->fullname}},
+									{{$actor->fullname}}
+								@endforeach
 							</p>
 							<div class="content">{{$films[2]->description}}</div>
 						</a>
@@ -60,9 +66,10 @@
 						<p class="title">{{$films[3]->title}} ({{$films[3]->release_year}})</p>
 						<p class="subtitle">
 							<span class="icon is-small"><i class="fa fa-star"></i></span>
-							{{$films[3]->actors[0]->fullname}},
-							{{$films[3]->actors[1]->fullname}},
-							{{$films[3]->actors[2]->fullname}}
+							@foreach ($films[3]->actors as $key => $actor)
+								{{$actor->fullname}},
+								{{$actor->fullname}}
+							@endforeach
 						</p>
 						<div class="content">{{$films[3]->description}}</div>
 					</a>
@@ -76,8 +83,10 @@
 						<p class="title">{{$films[4]->title}} ({{$films[4]->release_year}})</p>
 						<p class="subtitle">
 							<span class="icon is-small"><i class="fa fa-star"></i></span>
-							{{$films[4]->actors[0]->fullname}},
-							{{$films[4]->actors[1]->fullname}}
+							@foreach ($films[4]->actors as $key => $actor)
+								{{$actor->fullname}},
+								{{$actor->fullname}}
+							@endforeach
 						</p>
 						<div class="content">{{$films[4]->description}}</div>
 					</div>
