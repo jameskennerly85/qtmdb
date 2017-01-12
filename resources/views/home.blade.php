@@ -1,5 +1,19 @@
 @extends('master')
 @section('content')
+
+<form action="/search" method="get">
+	<div class="control is-grouped">
+		<p class="control is-expanded">
+			<input class="input is-large" type="text" name="term" placeholder="Search">
+		</p>
+		<p class="control">
+			<button class="button is-info is-large">
+				<i class="fa fa-search"></i>
+			</button>
+		</p>
+	</div>
+</form>
+
 <div class="tile is-parent">
 	<div class="tile is-ancestor">
 		<div class="tile is-vertical is-8">
